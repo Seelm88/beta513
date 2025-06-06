@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>513th Frog Battalion</title>
     <!-- Google Fonts - Inter for clean typography -->
-    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN for utility-first styling -->
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /*
         Custom CSS for the 513th Frog Battalion Website
@@ -25,7 +25,7 @@
         /* Styling for the main header section */
         .main-header {
             /* --- Background image styles added here --- */
-            background-image: url('https://imgur.com/a/2S4budV'); /* Replace with your actual image URL */
+            background-image: url('https://i.imgur.com/MYxqJCY.jpeg'); /* Replace with your actual image URL */
             background-size: cover; /* Ensures the image covers the entire header area */
             background-position: center; /* Centers the background image */
             background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -98,12 +98,12 @@
 
         /* Styling for the buttons */
         .cta-button {
-            background-color: linear-gradient(to right, black, red); /* <--- Fades from black on the left to red on the right */
+            background: linear-gradient(to right, black, red); /* <--- Fades from black on the left to red on the right */
             color: rgb(255, 255, 255);
             padding: 0.75rem 1.75rem; /* Generous padding for good tap targets */
             border-radius: 8px; /* Rounded button corners */
             text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: background 0.3s ease, transform 0.2s ease; /* Changed to 'background' */
             font-weight: 500;
             display: inline-flex; /* Use flex for potential icon/text alignment */
             align-items: center;
@@ -112,7 +112,7 @@
         }
 
         .cta-button:hover {
-            background-color: linear-gradient(to right, black, rgb(112, 20, 20)); /* <--- Fades from black on the left to red on the right */
+            background: linear-gradient(to right, black, rgb(112, 20, 20)); /* <--- Fades from black on the left to a darker red on the right */
             transform: translateY(-2px); /* Subtle lift effect */
             border-color: #000000; /* Darker green border on hover */
             box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Soft shadow on hover */
@@ -127,6 +127,11 @@
             margin-top: 3rem; /* Space above the footer */
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
+        }
+
+        /* New class for a white background section */
+        .white-background-section {
+            background-color: white; /* Sets the background to white */
         }
     </style>
 </head>
@@ -156,8 +161,8 @@
             </details>
 
             <!-- Call to Action Section with Buttons -->
-            <div class="bg-gradient-to-r from-green-500 to-emerald-600 p-8 rounded-xl shadow-lg text-center mb-12">
-                <h2 class="cta-heading text-white text-3xl font-bold mb-6">Check us out!</h2>
+            <div class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
+                <h2 class="cta-heading text-3xl font-bold mb-6">Check us out!</h2>
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="https://www.tiktok.com/@513thfrogbattalion" class="cta-button">Tiktok</a>
                     <a href="https://www.youtube.com/@513thFrogs" class="cta-button">Youtube</a>
@@ -165,9 +170,22 @@
                 </div>
             </div>
         </main>
-            <div>
-                <iframe src="https://discord.com/widget?id=1196158088642822205&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                </div>
+        <!-- Two Discord iframe sections side-by-side -->
+        <div class="flex flex-col md:flex-row justify-center items-start gap-8 mb-12">
+            <!-- Left Discord Box -->
+            <div class="white-background-section p-8 rounded-xl shadow-lg text-center w-full md:w-1/2 max-w-lg">
+                <h1 class="text-black text-3xl font-bold mb-6">513th Frog Battalion</h1>
+                <!-- Changed iframe width to 100% to be responsive within its container -->
+                <iframe class="w-full" src="https://discord.com/widget?id=1196158088642822205&theme=dark" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+
+            <!-- Right Discord Box (duplicate) -->
+            <div class="white-background-section p-8 rounded-xl shadow-lg text-center w-full md:w-1/2 max-w-lg">
+                <h1 class="text-black text-3xl font-bold mb-6">F13 Norrköping (Milsim)</h1>
+                <!-- Changed iframe width to 100% to be responsive within its container -->
+                <iframe class="w-full" src="https://discord.com/widget?id=1196158088642822205&theme=dark" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
         <!-- Footer Section -->
         <footer class="main-footer rounded-xl">
             <p>&copy; 2025 513th Frog Battalion. All rights reserved.</p>
