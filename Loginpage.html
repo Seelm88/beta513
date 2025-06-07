@@ -146,8 +146,15 @@
         <!-- Sign up link -->
         <p class="mt-8 text-center text-sm text-gray-600">
             Don't have an account?
-            <a href="#" class="font-medium text-blue-600 hover:text-blue-500 transition duration-200">
+            <a href="signup.html" class="font-medium text-blue-600 hover:text-blue-500 transition duration-200">
                 Sign up
+            </a>
+        </p>
+
+        <!-- Example of another internal page link -->
+        <p class="mt-4 text-center text-sm text-gray-600">
+            <a href="dashboard.html" class="font-medium text-purple-600 hover:text-purple-500 transition duration-200">
+                Go to Dashboard (example link)
             </a>
         </p>
     </div>
@@ -270,7 +277,7 @@
                 // Attempt to sign in with email and password
                 const userCredential = await signInWithEmailAndPassword(auth, email, password);
                 const user = userCredential.user;
-                showMessageBox(`Successfully signed in as ${user.email}!`, 'success');
+                showMessageBox(`Successfully signed in as ${user.email}! Redirecting...`, 'success');
                 console.log("User signed in:", user.uid);
 
                 // Store some user data in Firestore upon successful login
@@ -282,6 +289,13 @@
                     // Add other user details you want to store, e.g., name, display picture URL
                 }, { merge: true }); // Use merge: true to update existing fields without overwriting the whole document
                 console.log("User profile updated in Firestore.");
+
+                // --- START: REDIRECTION LOGIC ---
+                // Redirect the user to the dashboard or home page after successful login
+                window.location.href = 'home.html'; // Change 'dashboard.html' to your desired success page
+                // Or to prevent back button from returning to login:
+                // window.location.replace('dashboard.html');
+                // --- END: REDIRECTION LOGIC ---
 
             } catch (error) {
                 // Handle different error codes for better user feedback
