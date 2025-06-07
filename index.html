@@ -38,45 +38,25 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle shadow */
         }
         /* Changes for gradient text */
-        .site-title {
-        font-size: 2.5rem; /* Larger title on desktop */
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-        /* White outline using text-shadow */
-        text-shadow:
-            -1px -1px 0 #FFF,
-            1px -1px 0 #FFF,
-            -1px 1px 0 #FFF,
-            1px 1px 0 #FFF,
-            -2px -2px 0 #FFF, /* Optional: for a slightly thicker outline */
-            2px -2px 0 #FFF,
-            -2px 2px 0 #FFF,
-            2px 2px 0 #FFF;
-        /* Gradient for text */
-        background: linear-gradient(to right, #FFFF00, #80ad2c); /* Green to Sky Blue gradient */
-        -webkit-text-fill-color: transparent; /* Make text transparent so gradient shows through */
-        color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
-}
-
-            @media (min-width: 768px) {
                 .site-title {
-                    font-size: 3.5rem; /* Even larger on bigger screens */
-                }
-            }
+            font-size: 2.5rem; /* Larger title on desktop */
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #FFFF00, #FFA500); /* Yellow to Orange gradient */
+            color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
+        }
 
-            /* Changes for gradient text */
-            .site-slogan {
-                font-size: 1.1rem;
-                /* White outline using text-shadow */
-                text-shadow:
-                    -1px -1px 0 #FFF,
-                    1px -1px 0 #FFF,
-                    -1px 1px 0 #FFF,
-                    1px 1px 0 #FFF;
-                /* Gradient for text */
-                background: linear-gradient(to right, #FFFF00, #FFA500); /* Yellow to Orange gradient */
-                -webkit-text-fill-color: transparent; /* Make text transparent so gradient shows through */
-                color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
+        @media (min-width: 768px) {
+            .site-title {
+            font-size: 3.5rem; /* Even larger on bigger screens */
+            }
+        }
+
+        .site-slogan {
+            font-size: 1.1rem;
+            color: #000000; /* Black for slogan */
+            background: linear-gradient(to right, #FFFF00, #FFA500); /* Yellow to Orange gradient *
+            color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
             }
 
         /* Styling for the details (accordion) block */
