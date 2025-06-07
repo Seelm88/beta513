@@ -228,23 +228,26 @@
                     <input type="submit" value="Submit Inquiry">
                 </form>
             </section>
-            </main>
+        </main>
 
         <footer class="main-footer rounded-xl">
             <p>&copy; 2025 513th Frog Battalion. All rights reserved.</p>
             <p class="mt-2 text-sm">For official inquiries, contact our HQ.</p>
         </footer>
 
-    </div> <script>
+    </div> 
+    <script>
         // --- JavaScript to handle form submission to Google Sheet ---
         const form = document.getElementById('serverRentalForm');
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbykDJsKru5w1TvewV9Tg2p3-Nz1aJi-ti9VCGcAWb-s7xhC9TYnTTt2ozNFJAb4MJkZIw/exec'; // <--- PASTE YOUR DEPLOYED WEB APP URL HERE
+        // REMEMBER TO REPLACE THIS WITH YOUR DEPLOYED WEB APP URL!
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzrqQNpXcZLDl8b7O4Koq7YOSj4PRyPyVl5ZOYP_tP9gRNkuAv9u_DLdUMvH9ekxSuCMQ/exec'; 
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault(); // Prevent default form submission
 
             const formData = new FormData(form);
             const data = {};
+            // Convert FormData to a plain object
             for (let [key, value] of formData.entries()) {
                 data[key] = value;
             }
@@ -252,24 +255,22 @@
             try {
                 const response = await fetch(scriptURL, {
                     method: 'POST',
-                    mode: 'no-cors', // Required for cross-origin requests to Apps Script
+                    mode: 'no-cors', // Keep 'no-cors' for cross-origin Apps Script calls
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'application/json', // Specify content type as JSON
                     },
-                    body: JSON.stringify(data),
+                    body: JSON.stringify(data), // Send the data as a JSON string
                 });
 
-                // Since mode: 'no-cors' prevents reading the response, assume success
-                // and redirect. In a full production app, you might use CORS properly
-                // to get a server response, but for simple Sheets submission, this works.
+                // With 'no-cors', we cannot read the response object or its status directly.
+                // We assume success and redirect. If you need robust error checking,
+                // you'd need to configure CORS on the Apps Script side and remove 'no-cors'.
                 console.log('Form data sent to Google Sheet. Redirecting...');
                 window.location.href = 'thank-you.html'; // Redirect to your thank you page
 
             } catch (error) {
                 console.error('Error submitting form:', error);
                 alert('There was an error submitting your form. Please try again later.');
-                // Optionally redirect to an error page
-                // window.location.href = 'error.html';
             }
         });
     </script>
