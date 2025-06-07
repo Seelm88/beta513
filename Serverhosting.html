@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>513th Frog Battalion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /*
+        Custom CSS for the 513th Frog Battalion Website
+        This section overrides or enhances Tailwind's defaults for specific elements
+        to create a unique theme.
+        */
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray for a subtle background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Styling for the main header section */
+        .main-header {
+            /* --- Background image styles added here --- */
+            background-image: url('https://i.imgur.com/MYxqJCY.jpeg'); /* Replace with your actual image URL */
+            background-size: cover; /* Ensures the image covers the entire header area */
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-color: #f7f7f7; /* Fallback background color if image fails to load */
+            /* --- End background image styles --- */
+
+            color: #ffffff; /* Changed to white for better visibility against a potentially dark background image */
+            padding: 2.5rem 0; /* More vertical padding */
+            text-align: center;
+            border-bottom-left-radius: 15px; /* Rounded corners for the bottom */
+            border-bottom-right-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle shadow */
+        }
+        /* Changes for gradient text */
+        .site-title {
+            color: white; /* Sets the text color to white */
+            text-shadow:
+                -1px -1px 0 black,   /* Top-left shadow */
+                1px -1px 0 black,   /* Top-right shadow */
+                -1px  1px 0 black,   /* Bottom-left shadow */
+                1px  1px 0 black;   /* Bottom-right shadow */
+            font-size: 2.5rem; /* Larger title on desktop */
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .white-text-black-border {
+            color: white; /* Sets the text color to white */
+            text-shadow:
+                -1px -1px 0 black,   /* Top-left shadow */
+                1px -1px 0 black,   /* Top-right shadow */
+                -1px  1px 0 black,   /* Bottom-left shadow */
+                1px  1px 0 black;   /* Bottom-right shadow */
+        }
+
+        @media (min-width: 768px) {
+            .site-title {
+                font-size: 3.5rem; /* Even larger on bigger screens */
+            }
+        }
+
+        .site-slogan {
+            font-size: 1.1rem;
+            color: white; /* Sets the text color to white */
+            text-shadow:
+                -1px -1px 0 black,   /* Top-left shadow */
+                1px -1px 0 black,   /* Top-right shadow */
+                -1px  1px 0 black,   /* Bottom-left shadow */
+                1px  1px 0 black;   /* Bottom-right shadow */
+        }
+
+        /* Styling for the details (accordion) block */
+        .wp-block-details {
+            background-color: #ffffff; /* White background for readability */
+            border: 1px solid #d4edda; /* Subtle light green border */
+            padding: 1.5rem; /* Ample padding */
+            margin-bottom: 2rem; /* Space below the block */
+            border-radius: 10px; /* Nicely rounded corners */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* More pronounced shadow */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .wp-block-details:hover {
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12); /* Enhanced shadow on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        .wp-block-details summary {
+            font-weight: 700; /* Bolder summary text */
+            color: #000000; /* Sea green for summary */
+            cursor: pointer;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dotted #ccc; /* Dotted separator */
+            line-height: 1.4; /* Improve line spacing in summary */
+        }
+
+        .wp-block-details p {
+            color: #000000; /* Slightly darker text for content */
+            margin-top: 1rem; /* Space paragraphs within details */
+        }
+
+        /* Styling for the "Check us out!" heading */
+        .cta-heading {
+            color: #000000; /* Dark frog green */
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        /* Styling for the buttons */
+        .cta-button {
+            background: linear-gradient(to right, black, red); /* <--- Fades from black on the left to red on the right */
+            color: rgb(255, 255, 255);
+            padding: 0.75rem 1.75rem; /* Generous padding for good tap targets */
+            border-radius: 8px; /* Rounded button corners */
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease; /* Changed to 'background' */
+            font-weight: 500;
+            display: inline-flex; /* Use flex for potential icon/text alignment */
+            align-items: center;
+            justify-content: center;
+            border: 2px solid transparent; /* Placeholder for hover effect */
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(to right, black, rgb(112, 20, 20)); /* <--- Fades from black on the left to a darker red on the right */
+            transform: translateY(-2px); /* Subtle lift effect */
+            border-color: #000000; /* Darker green border on hover */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Soft shadow on hover */
+        }
+
+        /* Footer styling */
+        .main-footer {
+            background-color: #000000; /* Darker, more grounded color */
+            color: #ecf0f1; /* Light text for contrast */
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem; /* Space above the footer */
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        /* New class for a white background section */
+        .white-background-section {
+            background-color: white; /* Sets the background to white */
+        }
+    </style>
+</head>
+<body class="selection:bg-green-200 selection:text-green-800">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+
+        <header class="main-header rounded-xl mb-12">
+            <h1 class="site-title">513th Frog Battalion</h1>
+            <p class="site-slogan">Leap into Victory</p>
+        </header>
+
+        <div class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
+            <h2 class="cta-heading">Welcome to the 513th Frog Battalion!</h2>
+            <p class="text-gray-700 mb-6">Explore our operations, learn about our elite forces, and discover how we leap into victory.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="login.html" class="cta-button w-32 h-16">Login</a>
+                <a href="about.html" class="cta-button w-32 h-16">About Us</a>
+                <a href="missions.html" class="cta-button w-32 h-16">Missions</a>
+            </div>
+        </div>
+
+        <main class="mb-12">
+            <!-- Example content section -->
+            <section class="wp-block-details">
+                <summary>Our Mission</summary>
+                <p>The 513th Frog Battalion is dedicated to upholding peace and order through strategic aquatic operations. Our highly trained amphibians are masters of stealth, precision, and synchronized leaps.</p>
+            </section>
+
+            <section class="wp-block-details">
+                <summary>Training & Recruitment</summary>
+                <p>We are always on the lookout for brave and skilled amphibians. Our rigorous training program ensures every recruit is ready for any challenge, from lily pad reconnaissance to swamp incursions.</p>
+            </section>
+
+            <section class="wp-block-details">
+                <summary>Our Gear</summary>
+                <p>Equipped with state-of-the-art camouflage, grappling tongues, and specialized waterproof comms, our frog soldiers are prepared for any environment. We believe in innovation that helps us leap ahead of the competition.</p>
+            </section>
+        </main>
+
+        <footer class="main-footer rounded-xl">
+            <p>&copy; 2025 513th Frog Battalion. All rights reserved.</p>
+            <p class="mt-2 text-sm">For official inquiries, contact our HQ.</p>
+        </footer>
+
+    </div> <!-- Closing tag for container mx-auto -->
+</body>
+</html>
