@@ -151,6 +151,61 @@
         .white-background-section {
             background-color: white; /* Sets the background to white */
         }
+
+        /* Styling for the form within the white-background-section */
+        .form-section {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-section input[type="text"],
+        .form-section input[type="email"],
+        .form-section textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box; /* Ensures padding doesn't increase total width */
+        }
+
+        .form-section textarea {
+            min-height: 120px;
+            resize: vertical; /* Allow vertical resizing */
+        }
+
+        .form-section input[type="submit"] {
+            background: linear-gradient(to right, black, red);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            width: auto; /* Adjusts width to content */
+            display: block; /* Makes the button take its own line */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-section input[type="submit"]:hover {
+            background: linear-gradient(to right, black, rgb(112, 20, 20));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
     </style>
 </head>
 <body class="selection:bg-green-200 selection:text-green-800">
@@ -171,20 +226,42 @@
         </div>
 
         <main class="mb-12">
-            <!-- Example content section -->
             <section class="wp-block-details">
-                <summary>Our servers</summary>
+                <summary><strong>Our servers</strong></summary>
                 <p>Minecraft</p>
                 <p>Version: 1.21.4 Java-Vanilla         -><strong>often-magical.gl.joinmc.link</strong></p>
-                <p>Version: 1.21.83.1 Bedrock-Vanilla   -><strong>dead-shipped.gl.at.ply.gg</strong></p>
-                <p>Version: 2.41 AllTheMods10           -><strong>jun-hobby.gl.joinmc.link</strong></p>
+                <p>Version: 1.21.83.1 Bedrock-Vanilla    -><strong>dead-shipped.gl.at.ply.gg</strong></p>
+                <p>Version: 2.41 AllTheMods10          -><strong>jun-hobby.gl.joinmc.link</strong></p>
             </section>
+
+            <section class="form-section">
+                <h3 class="text-2xl font-bold text-center mb-6 text-gray-800">Server Rental Inquiry</h3>
+                <p>Price: 1€/1GB ram. (Recommended for Minecraft Vanilla 2-4GB, Modded 2-12GB.)</p>
+                <form action="process_form.php" method="POST"> <div class="mb-4">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="server-type">Desired Game/Server Type (e.g., Minecraft Java, Bedrock, Specific Modpack):</label>
+                        <input type="text" id="server-type" name="server-type" placeholder="e.g., Minecraft Java 1.21.4" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message">Additional Details/Requests:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us more about your server needs (number of players, duration, specific mods, etc.)"></textarea>
+                    </div>
+                    <input type="submit" value="Submit Inquiry">
+                </form>
+            </section>
+            </main>
 
         <footer class="main-footer rounded-xl">
             <p>&copy; 2025 513th Frog Battalion. All rights reserved.</p>
             <p class="mt-2 text-sm">For official inquiries, contact our HQ.</p>
         </footer>
 
-    </div> <!-- Closing tag for container mx-auto -->
-</body>
+    </div> </body>
 </html>
