@@ -33,6 +33,17 @@
                 document.body.classList.remove('loading'); // Show content if initially hidden
             }
         });
+
+        function logout() {
+            firebase.auth().signOut().then(() => {
+                // Sign-out successful.
+                window.location.replace('/index.html');
+            }).catch((error) => {
+                // An error happened.
+                console.error("Error signing out:", error);
+                alert("Error logging out. Please try again.");
+            });
+        }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -40,6 +51,87 @@
         /* This hides the content until JavaScript has verified authentication */
         body.loading {
             display: none;
+        }
+
+        /* Additional styles for the theme */
+        .main-header {
+            background-color: #2e7d32; /* Darker green */
+            color: white;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .site-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.05em;
+        }
+
+        .site-slogan {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .white-background-section {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+        }
+
+        .cta-heading {
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #1b5e20; /* Even darker green */
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #4caf50; /* Green */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #388e3c; /* Darker green on hover */
+        }
+
+        .wp-block-details {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .wp-block-details summary {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1b5e20;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+
+        .wp-block-details p {
+            color: #424242;
+            line-height: 1.6;
+        }
+
+        .main-footer {
+            background-color: #2e7d32;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -57,30 +149,23 @@
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="index.html" class="cta-button w-32 h-16">Home</a>
                 <a href="Serverhosting.html" class="cta-button w-32 h-16">Serverhosting</a>
+                <button onclick="logout()" class="cta-button w-32 h-16">Logout</button>
             </div>
         </div>
-
+        <div>
         <main class="mb-12">
             <section class="wp-block-details">
-                <summary>Our Mission</summary>
-                <p>The 513th Frog Battalion is dedicated to upholding peace and order through strategic aquatic operations. Our highly trained amphibians are masters of stealth, precision, and synchronized leaps.</p>
-            </section>
-
-            <section class="wp-block-details">
-                <summary>Training & Recruitment</summary>
-                <p>We are always on the lookout for brave and skilled amphibians. Our rigorous training program ensures every recruit is ready for any challenge, from lily pad reconnaissance to swamp incursions.</p>
-            </section>
-
-            <section class="wp-block-details">
-                <summary>Our Gear</summary>
-                <p>Equipped with state-of-the-art camouflage, grappling tongues, and specialized waterproof comms, our frog soldiers are prepared for any environment. We believe in innovation that helps us leap ahead of the competition.</p>
+                <summary>Storage</summary>
+                <p>Information to come</p>
             </section>
         </main>
+        </div>
 
         <footer class="main-footer rounded-xl">
             <p>&copy; 2025 513th Frog Battalion. All rights reserved.</p>
             <p class="mt-2 text-sm">For official inquiries, contact our HQ.</p>
         </footer>
 
-    </div> </body>
+    </div>
+</body>
 </html>
