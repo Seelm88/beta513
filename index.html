@@ -38,12 +38,18 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle shadow */
         }
         /* Changes for gradient text */
-                .site-title {
-            font-size: 2.5rem; /* Larger title on desktop */
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #FFFF00, #FFA500); /* Yellow to Orange gradient */
-            color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
+        .site-title {
+        .white-text-black-border {
+        color: white; /* Sets the text color to white */
+         text-shadow:
+            -1px -1px 2 black,  /* Top-left shadow */
+            1px -1px 2 black,  /* Top-right shadow */
+            -1px  1px 2 black,  /* Bottom-left shadow */
+            1px  1px 2 black;  /* Bottom-right shadow */
+}
+        font-size: 2.5rem; /* Larger title on desktop */
+        font-weight: 700;
+        margin-bottom: 0.5rem;
         }
 
         @media (min-width: 768px) {
@@ -54,10 +60,13 @@
 
         .site-slogan {
             font-size: 1.1rem;
-            color: #000000; /* Black for slogan */
-            background: linear-gradient(to right, #FFFF00, #FFA500); /* Yellow to Orange gradient *
-            color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
-            }
+        color: white; /* Sets the text color to white */
+         text-shadow:
+            -1px -1px 0 black,  /* Top-left shadow */
+            1px -1px 0 black,  /* Top-right shadow */
+            -1px  1px 0 black,  /* Bottom-left shadow */
+            1px  1px 0 black;  /* Bottom-right shadow */
+        }
 
         /* Styling for the details (accordion) block */
         .wp-block-details {
