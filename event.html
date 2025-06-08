@@ -7,149 +7,149 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /*
-        Custom CSS for the 513th Frog Battalion Website
-        This section overrides or enhances Tailwind's defaults for specific elements
-        to create a unique theme.
-        */
-
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8; /* Light blue-gray for a subtle background */
+            background-color: #f0f4f8;
             color: #333;
             line-height: 1.6;
         }
 
-        /* Styling for the main header section */
         .main-header {
-            /* --- Background image styles added here --- */
-            background-image: url('https://i.imgur.com/MYxqJCY.jpeg'); /* Replace with your actual image URL */
-            background-size: cover; /* Ensures the image covers the entire header area */
-            background-position: center; /* Centers the background image */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
-            background-color: #f7f7f7; /* Fallback background color if image fails to load */
-            /* --- End background image styles --- */
-
-            color: #ffffff; /* Changed to white for better visibility against a potentially dark background image */
-            padding: 2.5rem 0; /* More vertical padding */
+            background-image: url('https://i.imgur.com/MYxqJCY.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f7f7f7;
+            color: #ffffff;
+            padding: 2.5rem 0;
             text-align: center;
-            border-bottom-left-radius: 15px; /* Rounded corners for the bottom */
+            border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle shadow */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-        /* Changes for gradient text */
+
         .site-title {
-            color: white; /* Sets the text color to white */
+            color: white;
             text-shadow:
-                -1px -1px 0 black,  /* Top-left shadow */
-                1px -1px 0 black,   /* Top-right shadow */
-                -1px  1px 0 black,  /* Bottom-left shadow */
-                1px  1px 0 black;   /* Bottom-right shadow */
-            font-size: 2.5rem; /* Larger title on desktop */
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black,
+                1px 1px 0 black;
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
         .white-text-black-border {
-            color: white; /* Sets the text color to white */
+            color: white;
             text-shadow:
-                -1px -1px 0 black,  /* Top-left shadow */
-                1px -1px 0 black,   /* Top-right shadow */
-                -1px  1px 0 black,  /* Bottom-left shadow */
-                1px  1px 0 black;   /* Bottom-right shadow */
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black,
+                1px 1px 0 black;
         }
 
         @media (min-width: 768px) {
             .site-title {
-                font-size: 3.5rem; /* Even larger on bigger screens */
+                font-size: 3.5rem;
             }
         }
 
         .site-slogan {
             font-size: 1.1rem;
-            color: white; /* Sets the text color to white */
+            color: white;
             text-shadow:
-                -1px -1px 0 black,  /* Top-left shadow */
-                1px -1px 0 black,   /* Top-right shadow */
-                -1px  1px 0 black,  /* Bottom-left shadow */
-                1px  1px 0 black;   /* Bottom-right shadow */
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black,
+                1px 1px 0 black;
         }
 
-        /* Styling for the details (accordion) block */
         .wp-block-details {
-            background-color: #ffffff; /* White background for readability */
-            border: 1px solid #d4edda; /* Subtle light green border */
-            padding: 1.5rem; /* Ample padding */
-            margin-bottom: 2rem; /* Space below the block */
-            border-radius: 10px; /* Nicely rounded corners */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* More pronounced shadow */
+            background-color: #ffffff;
+            border: 1px solid #d4edda;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             transition: all 0.3s ease-in-out;
         }
 
         .wp-block-details:hover {
-            box-shadow: 0 6px 16px rgba(0,0,0,0.12); /* Enhanced shadow on hover */
-            transform: translateY(-2px); /* Slight lift on hover */
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
         }
 
         .wp-block-details summary {
-            font-weight: 700; /* Bolder summary text */
-            color: #000000; /* Sea green for summary */
+            font-weight: 700;
+            color: #000000;
             cursor: pointer;
             padding-bottom: 1rem;
             margin-bottom: 1rem;
-            border-bottom: 1px dotted #ccc; /* Dotted separator */
-            line-height: 1.4; /* Improve line spacing in summary */
+            border-bottom: 1px dotted #ccc;
+            line-height: 1.4;
         }
 
         .wp-block-details p {
-            color: #000000; /* Slightly darker text for content */
-            margin-top: 1rem; /* Space paragraphs within details */
+            color: #000000;
+            margin-top: 1rem;
         }
 
-        /* Styling for the "Check us out!" heading */
         .cta-heading {
-            color: #000000; /* Dark frog green */
+            color: #000000;
             margin-bottom: 2rem;
             font-size: 2rem;
             font-weight: 600;
         }
 
-        /* Styling for the buttons */
         .cta-button {
-            background: linear-gradient(to right, black, red); /* <--- Fades from black on the left to red on the right */
+            background: linear-gradient(to right, black, red);
             color: rgb(255, 255, 255);
-            padding: 0.75rem 1.75rem; /* Generous padding for good tap targets */
-            border-radius: 8px; /* Rounded button corners */
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
             text-decoration: none;
-            transition: background 0.3s ease, transform 0.2s ease; /* Changed to 'background' */
+            transition: background 0.3s ease, transform 0.2s ease;
             font-weight: 500;
-            display: inline-flex; /* Use flex for potential icon/text alignment */
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid transparent; /* Placeholder for hover effect */
+            border: 2px solid transparent;
         }
 
         .cta-button:hover {
-            background: linear-gradient(to right, black, rgb(112, 20, 20)); /* <--- Fades from black on the left to a darker red on the right */
-            transform: translateY(-2px); /* Subtle lift effect */
-            border-color: #000000; /* Darker green border on hover */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Soft shadow on hover */
+            background: linear-gradient(to right, black, rgb(112, 20, 20));
+            transform: translateY(-2px);
+            border-color: #000000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
 
-        /* Footer styling */
         .main-footer {
-            background-color: #000000; /* Darker, more grounded color */
-            color: #ecf0f1; /* Light text for contrast */
+            background-color: #000000;
+            color: #ecf0f1;
             padding: 2rem 0;
             text-align: center;
-            margin-top: 3rem; /* Space above the footer */
+            margin-top: 3rem;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
         }
 
-        /* New class for a white background section */
         .white-background-section {
-            background-color: white; /* Sets the background to white */
+            background-color: white;
+        }
+
+        /* Iframe centering styles */
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .iframe-container iframe {
+            width: 1200px;
+            height: 1200px;
+            border: none;
         }
     </style>
 </head>
@@ -161,13 +161,19 @@
             <p class="site-slogan">Leap into Victory</p>
         </header>
 
-        <!-- New section for quick access buttons -->
-        <div class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
+        <section class="white-background-section p-8 rounded-xl shadow-lg text-center mb-12">
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="index.html" class="cta-button w-32 h-12">Home</a>
                 <a href="Serverhosting.html" class="cta-button w-32 h-12">Serverhosting</a>
+                <a href="event.html" class="cta-button w-32 h-12">Events</a>
             </div>
-        </div>
+        </section>
+
         <main>
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT8TrQQYtwIcxcLxkS-LLvpQEl0L49tjQuGHc1DPbOykYanpTnlaPNLCjslO1ho1pkElRXBnOxI0YmN/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="1200" height="1600"></iframe>
+            <div class="iframe-container">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT8TrQQYtwIcxcLxkS-LLvpQEl0L49tjQuGHc1DPbOykYanpTnlaPNLCjslO1ho1pkElRXBnOxI0YmN/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+            </div>
         </main>
+    </div>
+</body>
+</html>
